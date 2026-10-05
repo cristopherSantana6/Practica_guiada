@@ -17,7 +17,7 @@
         <VBox spacing="10">
             <padding><Insets top="15" right="15" bottom="12" left="15"/></padding>
             <Label text="GESTIÓN DE PRODUCTOS"/>
-            <Label text="Etapa 50% - tabla y registro de productos"/>
+            <Label text="Etapa 70% - CRUD completo"/>
         </VBox>
     </top>
     <center>
@@ -51,11 +51,10 @@
                 <CheckBox fx:id="chkActivo" text="Producto activo" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
             </GridPane>
             <HBox spacing="8">
-                <Button text="Guardar" onAction="#guardarProducto"/>
-                <Button text="Actualizar" disable="true"/>
-                <Button text="Limpiar" onAction="#limpiarFormulario"/>
+                <Button fx:id="btnGuardar" text="Guardar" onAction="#guardarProducto"/>
+                <Button fx:id="btnActualizar" text="Actualizar" onAction="#actualizarProducto" disable="true"/>
             </HBox>
-            <Button text="Eliminar" disable="true"/>
+            <Button fx:id="btnEliminar" text="Eliminar" onAction="#eliminarProducto" disable="true"/>
         </VBox>
     </right>
 </BorderPane>
