@@ -17,7 +17,13 @@
         <VBox spacing="10">
             <padding><Insets top="15" right="15" bottom="12" left="15"/></padding>
             <Label text="GESTIÓN DE PRODUCTOS"/>
-            <Label text="Etapa 70% - CRUD completo"/>
+            <Label text="Etapa 100% - práctica completa"/>
+            <HBox spacing="10">
+                <TextField fx:id="txtBuscar" promptText="Buscar por código, nombre o categoría" prefWidth="340"/>
+                <ComboBox fx:id="cbEstado" prefWidth="130"/>
+                <ComboBox fx:id="cbFiltroCategoria" prefWidth="190"/>
+                <Label fx:id="lblResultado" text="Mostrando 0 productos"/>
+            </HBox>
         </VBox>
     </top>
     <center>
@@ -53,6 +59,7 @@
             <HBox spacing="8">
                 <Button fx:id="btnGuardar" text="Guardar" onAction="#guardarProducto"/>
                 <Button fx:id="btnActualizar" text="Actualizar" onAction="#actualizarProducto" disable="true"/>
+                <Button text="Limpiar" onAction="#limpiarFormulario"/>
             </HBox>
             <Button fx:id="btnEliminar" text="Eliminar" onAction="#eliminarProducto" disable="true"/>
         </VBox>
