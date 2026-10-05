@@ -17,18 +17,18 @@
         <VBox spacing="10">
             <padding><Insets top="15" right="15" bottom="12" left="15"/></padding>
             <Label text="GESTIÓN DE PRODUCTOS"/>
-            <Label text="Etapa 20% - estructura inicial"/>
+            <Label text="Etapa 50% - tabla y registro de productos"/>
         </VBox>
     </top>
     <center>
         <TableView fx:id="tblProductos">
             <columns>
-                <TableColumn text="Código" prefWidth="90"/>
-                <TableColumn text="Nombre" prefWidth="190"/>
-                <TableColumn text="Categoría" prefWidth="140"/>
-                <TableColumn text="Precio" prefWidth="100"/>
-                <TableColumn text="Existencia" prefWidth="90"/>
-                <TableColumn text="Activo" prefWidth="80"/>
+                <TableColumn fx:id="colCodigo" text="Código" prefWidth="90"/>
+                <TableColumn fx:id="colNombre" text="Nombre" prefWidth="190"/>
+                <TableColumn fx:id="colCategoria" text="Categoría" prefWidth="140"/>
+                <TableColumn fx:id="colPrecio" text="Precio" prefWidth="100"/>
+                <TableColumn fx:id="colExistencia" text="Existencia" prefWidth="90"/>
+                <TableColumn fx:id="colActivo" text="Activo" prefWidth="80"/>
             </columns>
         </TableView>
     </center>
@@ -48,11 +48,12 @@
                 <Label text="Existencia:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
                 <TextField fx:id="txtExistencia" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
                 <Label text="Activo:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
-                <CheckBox text="Producto activo" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+                <CheckBox fx:id="chkActivo" text="Producto activo" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
             </GridPane>
             <HBox spacing="8">
-                <Button text="Guardar"/>
+                <Button text="Guardar" onAction="#guardarProducto"/>
                 <Button text="Actualizar" disable="true"/>
+                <Button text="Limpiar" onAction="#limpiarFormulario"/>
             </HBox>
             <Button text="Eliminar" disable="true"/>
         </VBox>
